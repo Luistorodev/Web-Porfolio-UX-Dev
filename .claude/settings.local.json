@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx --yes shadcn@latest init --help)",
+      "PowerShell(npx --yes shadcn@latest add button card badge avatar separator --yes 2>&1 | Out-String)",
+      "PowerShell(npm run *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; if \\($r.Content -match \"Hola, soy Luis\"\\) { \"OK: hero presente\" }; if \\($r.Content -match \"Dashboard de Anal\"\\) { \"OK: proyectos presentes\" }; if \\($r.Content -match \"Stack\"\\) { \"OK: stack presente\" } } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(npm install *)",
+      "PowerShell(npx --yes shadcn@latest add dropdown-menu --yes 2>&1 | Out-String)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; if \\($r.Content -match \"Cambiar tema\"\\) { \"OK: selector de tema presente en el navbar\" } else { \"WARN: no se encontro el selector\" } } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; if \\($r.Content -match \"Cambiar tema\"\\) { \"OK: toggle presente\" } } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(npx tsc --noEmit 2>&1 | Out-String; \"TSC_EXIT=$LASTEXITCODE\")",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; if \\($r.Content -match \"Proyectos\"\\) { \"OK: contenido ES por defecto\" } } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000/PP_1.png\" -UseBasicParsing -TimeoutSec 30; \"IMG STATUS: $\\($r.StatusCode\\) \\($\\($r.Headers['Content-Type']\\)\\)\" } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 60; \"STATUS: $\\($r.StatusCode\\)\"; if \\($r.Content -match \"picsum\"\\) { \"OK: imagenes en las cards\" } } catch { \"ERROR: $\\($_.Exception.Message\\)\" })",
+      "PowerShell(git status 2>&1 | Out-String; \"---REMOTE---\"; git remote -v 2>&1 | Out-String)"
+    ]
+  }
+}
